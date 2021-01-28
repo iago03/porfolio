@@ -1,0 +1,93 @@
+section{
+    padding: 50px 0px 30px;
+    width: 80%;
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+section .left {
+    width: 43%;
+    padding: 17px;
+}
+
+section .right {
+    width: 56%;
+}
+
+
+section .right article{
+    padding: 17px;
+}
+
+section .right h1{
+    font-size: 38px;
+    padding: 0px 0px;
+    margin: 0px 0px 25px;
+    text-align: center;
+}
+
+section .right p{
+    font-size: 16px;
+    line-height: 2em;
+    letter-spacing: 0em;
+    margin: 0px;
+}
+
+section .right .myContent {
+    margin-bottom: 27px;
+}
+
+section .right input{
+    height: calc(1.5em + 20px + 2px);
+}
+
+section .right input,textarea {
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 0px;
+    font-size: 14px;
+    padding: 12px;
+}
+
+textarea{
+    height: calc(5.5em + .75rem + 2px);
+}
+
+section .right input:focus,textarea:focus{
+    outline: none;
+    box-shadow: none;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+section .right button{
+    font-size: 18px!important;
+    padding: 12px 30px!important;
+}
+
+/* style for form */
+
+.danger{
+    border: 2px solid red!important;
+    border-radius: 5px!important;
+}
+
+/* respons */
+
+@media screen and (max-width:500px)
+{
+    main section{
+        width: 100%;
+    }
+
+    main section .right .myContent{
+        flex-direction: column;
+    }
+    main section .right .myContent .col:last-child{
+        margin-top: 10px;
+    }
+
+}

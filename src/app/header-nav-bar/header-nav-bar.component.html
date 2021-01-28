@@ -1,0 +1,44 @@
+<header [ngClass]="{'heder-active':index}">
+    <nav>
+        <ul 
+        [ngClass]="{'ul-active':index}"
+        class="nav-bar-link">
+            <div
+            [ngClass]="{'list-active':index,'info':!index}">
+                <li class="dropdown-bar">
+                    <p
+                    (click)="onDropDownButtonClick()"
+                    >შესავალი<i class="fas fa-chevron-down"></i></p>
+                    <ul 
+                    [ngClass]="{'burger-drop-down':index && index2,'dropdown-content':!index2}">
+                        <li><a 
+                            routerLink="/about-my"
+                            >ჩემს შესახებ</a></li>
+                        <li><a 
+                            routerLink="/eduqation"
+                            >განათლება</a></li>
+                    </ul>
+                </li>
+                <li><a 
+                    routerLink="/"
+                    >სამუშაოები</a></li>
+            </div>
+            <li class="burger-title"><a 
+                routerLink="/"
+                class="title">იაგო ხარატიშვილი</a></li>
+            <li
+            [ngClass]="{'list-active':index,'contact':!index}">
+            <a 
+                routerLink="/contact"
+                >კონტაქტი</a></li>
+        </ul>
+        <div 
+        (click)="onBurgerClik()"
+        class="burger">
+            <span
+            [ngClass]="{'burger-span-active':index}"
+            class="burger-span"
+            ></span>
+        </div>
+    </nav>
+</header>

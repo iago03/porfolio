@@ -1,0 +1,144 @@
+section{
+    width: 80%;
+    margin: 0px auto 50px;
+}
+
+section h3{
+    font-size: 23px;
+    text-align: center;
+    max-width: 780px;
+    margin: 0px auto 60px;
+}
+
+section .content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section .content aside{
+    padding: 10px;
+}
+
+section .content .left{
+    width: 46%;
+}
+section .content .right{
+    width: 53%;
+}
+
+section .content aside p{
+    margin-bottom: 25px;
+    line-height: 2em;
+    font-weight: 500;
+}
+
+/* skils area */
+
+section .skills ul{
+    list-style: none;
+    width: 75%;
+    margin: 0px auto;
+    padding: 0px;
+    overflow: hidden;
+}
+
+section .skills h4{
+    text-align: center;
+    margin: 25px 0px 10px;
+}
+
+section .skills ul li:nth-child(even){
+    background-color:rgb(195, 148, 44);
+    height:20px;
+    position: relative;
+    margin-bottom:10px;
+}
+
+section .skills ul li:nth-child(even)::before { 
+    content: "";
+    position:absolute;
+    top:0;
+    left:0;
+    bottom: 0;
+    background-color: rgb(236, 211, 109);
+    width:50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+li:nth-child(2)::before {
+    content:'90%'!important;
+    animation: HTML 3.0s ease-in-out forwards;
+}
+
+li:nth-child(4)::before {
+    content:'85%'!important;
+    animation: CSS 3.0s ease-in-out forwards;
+}
+li:nth-child(6)::before {
+    content:'70%'!important;
+    animation: JS 3.0s ease-in-out forwards;
+}
+li:nth-child(8)::before {
+    content:'65%'!important;
+    animation: ANGULAR 3.0s ease-in-out forwards;
+}
+
+@keyframes HTML{
+    0%{
+      width:0%
+    }
+    100%{
+      width:90%;
+      color: rgb(139, 119, 0);
+    }
+    
+}
+@keyframes CSS{
+    0%{
+      width:0%
+    }
+    100%{
+      width:85%;
+      color: rgb(139, 119, 0);
+    }
+    
+}
+@keyframes JS{
+    0%{
+      width:0%
+    }
+    100%{
+      width:70%;
+      color: rgb(139, 119, 0);
+    }
+    
+}
+@keyframes ANGULAR{
+    0%{
+      width:0%
+    }
+    100%{
+      width:65%;
+      color: rgb(139, 119, 0);
+    }
+    
+}
+
+/* skils area */
+  
+
+/* respons */
+
+@media screen and (max-width:780px)
+{
+    section .content .right{
+        margin-top: 30px;
+    }
+
+    section .skills ul{
+        width: 100%;
+    }
+}

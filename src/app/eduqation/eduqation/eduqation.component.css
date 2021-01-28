@@ -1,0 +1,30 @@
+section{
+    width: 50%;
+    margin: 0px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+h1{
+    font-size: 38px;
+    padding: 17px 0px;
+    margin: 0px;
+}
+
+article{
+    margin-top: 50px;
+}
+
+.eduqation-card{
+    margin-bottom: 30px;
+}
+
+main section .eduqation-card .img{
+    width: 150px;
+    max-height: 200px;
+    margin: 17px auto;
+}
+
+main section .eduqation-card p{
+    margin: 0px 0px 10px;
+}

@@ -1,0 +1,16 @@
+<main>
+    <section>
+        <h1>განათლება</h1>
+        <article class="content">
+            <div class="eduqation-card" *ngFor="let item of eduqationItems">
+                <h5>{{item.Title}}</h5>
+                <div class="img">
+                    <img [src]="item.Img" alt="">
+                </div>
+                <h6>{{item.Pakulteti}}</h6>
+                <p>{{item.Pograma}}</p>
+                <p>{{item.Years}}</p>
+            </div>
+        </article>
+    </section>
+</main>

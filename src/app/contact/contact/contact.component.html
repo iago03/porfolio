@@ -1,0 +1,61 @@
+<main>
+    <section>
+        <aside class="left">
+            <div class="img">
+                <img src="../../../assets/img/contact.jpeg"
+                    alt="">
+            </div>
+        </aside>
+        <aside class="right">
+            <article class="text-content">
+                <h1>გამარჯობათ!</h1>
+                <p>მომწერეთ თქვენი შეხედულებები, რჩევები ან დამისვით რაიმე კითხვები. მომწერეთ თვენი ელექტრონული ფოსტის მისამართი და მე აუცილებლად გაგცემთ პასუხს.</p>
+            </article>
+
+
+            <article class="form-content">
+                <form #frm="ngForm">
+                    <label for="">თქვენი ვინაობა? *</label>
+                    <div class="row myContent">
+                        <div class="col">
+                            <input 
+                            [(ngModel)]="formItem.Name"
+                            #nameUser="ngModel"
+                            [ngClass]="{'danger':nameUser.touched && nameUser.invalid}"
+                            type="text" required class="form-control" name="FirstName" placeholder="სახელი">
+                        </div>
+                        <div class="col">
+                            <input 
+                            [(ngModel)]="formItem.Surname"
+                            #surnameUser="ngModel"
+                            [ngClass]="{'danger':surnameUser.touched && surnameUser.invalid}"
+                            type="text" required class="form-control" name="LastName" placeholder="გვარი">
+                        </div>
+                    </div>
+                    <div class="form-group myContent">
+                        <label for="">Email *</label>
+                        <input
+                        [(ngModel)]="formItem.Email"
+                        #mailUser="ngModel"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+                        [ngClass]="{'danger':mailUser.touched && mailUser.invalid}"
+                        type="email" name="Email" required class="form-control" >
+                    </div>
+                    <div class="form-group myContent">
+                        <label for="exampleFormControlTextarea1">მომწერეთ თვენი შეხედულებები *</label>
+                        <textarea
+                        [(ngModel)]="formItem.Text"
+                        #textUser="ngModel"
+                        [ngClass]="{'danger':textUser.touched && textUser.invalid}"
+                        class="form-control" required name="Text" id="exampleFormControlTextarea1"></textarea>
+                    </div>
+                    <button
+                    (click)="onClick(frm);" 
+                    appButtonDir
+                    name="button" [disabled]="frm.invalid">გაგზავნა</button>
+                </form>
+            </article>
+
+        </aside>
+    </section>
+</main>

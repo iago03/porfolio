@@ -1,0 +1,16 @@
+<main>
+    <section>
+        <h3>ჩემი ნამუშევრები</h3>
+        <article class="cards-area">
+            <app-work-card
+            *ngFor="let item of workCardAll" [cardItem]="item"
+            class="new-card"
+            ></app-work-card>
+        </article>
+        <button
+        routerLink="/contact"
+        appButtonDir
+        class="work-button"
+        >საუბარი</button>
+    </section>
+</main>
