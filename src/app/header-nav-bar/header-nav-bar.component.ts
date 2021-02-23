@@ -29,4 +29,11 @@ export class HeaderNavBarComponent implements OnInit {
     }
   }
 
+  collapse(){
+    if(this.index){
+      this.index = false;
+      this.index2 = false;
+    }
+  }
+
 }

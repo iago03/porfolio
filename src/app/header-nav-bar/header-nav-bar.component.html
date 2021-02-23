@@ -13,14 +13,17 @@
                     [ngClass]="{'burger-drop-down':index && index2,'dropdown-content':!index2}">
                         <li><a 
                             routerLink="/about-my"
+                            (click)="collapse()"
                             >ჩემს შესახებ</a></li>
                         <li><a 
                             routerLink="/eduqation"
+                            (click)="collapse()"
                             >განათლება</a></li>
                     </ul>
                 </li>
                 <li><a 
                     routerLink="/"
+                    (click)="collapse()"
                     >სამუშაოები</a></li>
             </div>
             <li class="burger-title"><a 
@@ -30,6 +33,7 @@
             [ngClass]="{'list-active':index,'contact':!index}">
             <a 
                 routerLink="/contact"
+                (click)="collapse()"
                 >კონტაქტი</a></li>
         </ul>
         <div 
