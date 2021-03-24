@@ -11,7 +11,7 @@ export class WorkComponent implements OnInit {
     new workCArd("https://blogcastillo.netlify.app","./assets/img/blogcastillo.jpg","Blog Castillo"),
     new workCArd("https://nageboba.netlify.app","./assets/img/building.jpg","building"),
     new workCArd("https://fashionbeautyblog.netlify.app","./assets/img/fashionblog.jpg","fashion beauty blog"),
-    new workCArd("https://tik-tak-toi.netlify.app","./assets/img/tik-tak.jpg","tik-tak Game"),
+    new workCArd("https://tik-tak-toi.netlify.app","./assets/img/tik-tak.jpg","Tic-Tac-Toe"),
     new workCArd("https://calculatoriago.netlify.app","./assets/img/calculator.png","jquery HTML and CSS"),
     new workCArd("https://by-healthiest.netlify.app","./assets/img/healthiest.jpg","Healthy"),
   ]
