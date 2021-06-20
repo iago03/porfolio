@@ -26,9 +26,10 @@ h3{
     width: 100%;
 }
 
-@media screen and (max-width:780px)
+@media screen and (max-width:860px)
 {
     .new-card{
         width: 100%!important;
+        margin-bottom: 10px;
     }
 }

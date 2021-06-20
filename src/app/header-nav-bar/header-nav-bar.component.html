@@ -8,33 +8,51 @@
                 <li class="dropdown-bar">
                     <p
                     (click)="onDropDownButtonClick()"
-                    >შესავალი<i class="fas fa-chevron-down"></i></p>
+                    >{{languageChangeStatus ? "ინფორმაცია":"Information"}}<i class="fas fa-chevron-down"></i></p>
                     <ul 
                     [ngClass]="{'burger-drop-down':index && index2,'dropdown-content':!index2}">
                         <li><a 
+                            [ngClass]="{'white':backgroundColor, 'black':!backgroundColor}"
                             routerLink="/about-my"
                             (click)="collapse()"
-                            >ჩემს შესახებ</a></li>
-                        <li><a 
+                            >{{languageChangeStatus ? "ჩემს შესახებ":"about me"}}</a></li>
+                        <li><a
+                            [ngClass]="{'white':backgroundColor, 'black':!backgroundColor}" 
                             routerLink="/eduqation"
                             (click)="collapse()"
-                            >განათლება</a></li>
+                            >{{languageChangeStatus ? "განათლება":"education"}}</a></li>
                     </ul>
                 </li>
-                <li><a 
+                <li><a
+                    [ngClass]="{'white':backgroundColor, 'black':!backgroundColor}" 
                     routerLink="/"
                     (click)="collapse()"
-                    >სამუშაოები</a></li>
+                    >{{languageChangeStatus ? "ნამუშევრები":"works"}}</a></li>
+                <li>
+                    <button 
+                    [ngClass]="{'sun':backgroundColor, 'moon':!backgroundColor}"
+                    (click)="changeBackgroun()"
+                    >
+                    <i [ngClass]="{'fa-sun':backgroundColor, 'fa-moon':!backgroundColor}"
+                    class="far"></i>
+                    </button>
+                </li>
             </div>
             <li class="burger-title"><a 
                 routerLink="/"
-                class="title">იაგო ხარატიშვილი</a></li>
+                class="title">{{languageChangeStatus ? "იაგო ხარატიშვილი":"Iago Kharatishvili"}}</a>
+            </li>
+
             <li
             [ngClass]="{'list-active':index,'contact':!index}">
+            <button 
+                (click)="languageChange()"
+                class="language"><img [src]="languageButtonImg" alt=""></button>
             <a 
+                [ngClass]="{'white':backgroundColor, 'black':!backgroundColor}"
                 routerLink="/contact"
                 (click)="collapse()"
-                >კონტაქტი</a></li>
+                >{{languageChangeStatus ? "კონტაქტი":"contact"}}</a></li>
         </ul>
         <div 
         (click)="onBurgerClik()"

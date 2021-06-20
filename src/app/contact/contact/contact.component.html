@@ -8,28 +8,28 @@
         </aside>
         <aside class="right">
             <article class="text-content">
-                <h1>გამარჯობათ!</h1>
-                <p>მომწერეთ თქვენი შეხედულებები, რჩევები ან დამისვით რაიმე კითხვები. მომწერეთ თვენი ელექტრონული ფოსტის მისამართი და მე აუცილებლად გაგცემთ პასუხს.</p>
+                <h1>{{language ? "გამარჯობათ":"Hello"}}!</h1>
+                <p>{{language ? "მომწერეთ თქვენი შეხედულებები, რჩევები ან დამისვით რაიმე კითხვები. მომწერეთ თვენი ელექტრონული ფოსტის მისამართი და მე აუცილებლად გაგცემთ პასუხს.":"Write me your opinion, advice or ask questions. Write me your email address and I will definitely answer you."}}</p>
             </article>
 
 
             <article class="form-content">
                 <form #frm="ngForm">
-                    <label for="">თქვენი ვინაობა? *</label>
+                    <label for="">{{language ? "თქვენი ვინაობა?":"Your identity"}} *</label>
                     <div class="row myContent">
                         <div class="col">
                             <input 
                             [(ngModel)]="formItem.Name"
                             #nameUser="ngModel"
                             [ngClass]="{'danger':nameUser.touched && nameUser.invalid}"
-                            type="text" required class="form-control" name="FirstName" placeholder="სახელი">
+                            type="text" required class="form-control" name="FirstName" placeholder="{{language ? 'სახელი':'name'}}">
                         </div>
                         <div class="col">
                             <input 
                             [(ngModel)]="formItem.Surname"
                             #surnameUser="ngModel"
                             [ngClass]="{'danger':surnameUser.touched && surnameUser.invalid}"
-                            type="text" required class="form-control" name="LastName" placeholder="გვარი">
+                            type="text" required class="form-control" name="LastName" placeholder="{{language ? 'გვარი':'surname'}}">
                         </div>
                     </div>
                     <div class="form-group myContent">
@@ -42,7 +42,7 @@
                         type="email" name="Email" required class="form-control" >
                     </div>
                     <div class="form-group myContent">
-                        <label for="exampleFormControlTextarea1">მომწერეთ თვენი შეხედულებები *</label>
+                        <label for="exampleFormControlTextarea1">{{language ? "მომწერეთ თვენი შეხედულებები":"Write me your views"}} *</label>
                         <textarea
                         [(ngModel)]="formItem.Text"
                         #textUser="ngModel"
@@ -52,7 +52,7 @@
                     <button
                     (click)="onClick(frm);" 
                     appButtonDir
-                    name="button" [disabled]="frm.invalid">გაგზავნა</button>
+                    name="button" [disabled]="frm.invalid">{{language ? "გაგზავნა":"send"}}</button>
                 </form>
             </article>
 

@@ -1,6 +1,6 @@
 <main>
     <section>
-        <h3>ჩემი ნამუშევრები</h3>
+        <h3>{{language ? "ჩემი ნამუშევრები":"My works"}}</h3>
         <article class="cards-area">
             <app-work-card
             *ngFor="let item of workCardAll" [cardItem]="item"
@@ -11,6 +11,6 @@
         routerLink="/contact"
         appButtonDir
         class="work-button"
-        >საუბარი</button>
+        >{{language ? "საუბარი":"contact"}}</button>
     </section>
 </main>

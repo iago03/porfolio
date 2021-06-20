@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Form } from 'src/app/shared-file/shared-eduqation';
+import { LanguageChangeService } from '../../shared_service/language-change.service';
 
 import '../../../assets/smtp.js';
 declare let Email : any;
@@ -19,9 +20,18 @@ const option = {
 export class ContactComponent implements OnInit {
   formItem:Form = new Form();
 
-  constructor() { }
+  language:boolean = true;
 
-  ngOnInit(): void {
+  constructor(private languageChange:LanguageChangeService){ }
+
+  ngOnInit():void{
+    if(localStorage.getItem("language") != null){
+      this.language = ("true" === localStorage.getItem("language"))
+    }
+
+    this.languageChange.languageChangeEvent.asObservable().subscribe((item:boolean) => {
+      this.language = item;
+    })
   }
 
 

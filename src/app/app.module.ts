@@ -13,6 +13,7 @@ import { WorkComponent } from './work/work/work.component';
 import { WorkCArdComponent } from './work/work-card/work-card/work-card.component';
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,

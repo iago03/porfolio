@@ -13,7 +13,7 @@ button:focus {
     box-shadow: none;
 }
 
-@media screen and (max-width:780px)
+@media screen and (max-width:860px)
 {
     header{
         padding: 0px 20px!important;
@@ -33,3 +33,11 @@ button:focus {
     }
 }
 
+.dark{
+    background-color: rgb(80, 80, 80);
+    color: white;
+}
+.light{
+    background-color: white;
+    color: black;
+}

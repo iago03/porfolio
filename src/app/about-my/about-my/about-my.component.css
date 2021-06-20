@@ -23,6 +23,28 @@ section .content aside{
 section .content .left{
     width: 46%;
 }
+
+section .content .left .img{
+    box-shadow: 15px 15px 20px rgb(100, 100, 100);
+}
+
+section .content .right ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0px;
+    margin: 45px 0px 0px;
+}
+
+section .content .right a{
+    color: rgb(195, 148, 44);
+}
+
+section .content .right a i{
+    font-size: 45px;
+}
+
 section .content .right{
     width: 53%;
 }
@@ -68,20 +90,20 @@ section .skills ul li:nth-child(even)::before {
     align-items: center;
 }
 
-li:nth-child(2)::before {
+section .skills ul li:nth-child(2)::before {
     content:'90%'!important;
     animation: HTML 3.0s ease-in-out forwards;
 }
 
-li:nth-child(4)::before {
+section .skills ul li:nth-child(4)::before {
     content:'85%'!important;
     animation: CSS 3.0s ease-in-out forwards;
 }
-li:nth-child(6)::before {
+section .skills ul li:nth-child(6)::before {
     content:'70%'!important;
     animation: JS 3.0s ease-in-out forwards;
 }
-li:nth-child(8)::before {
+section .skills ul li:nth-child(8)::before {
     content:'65%'!important;
     animation: ANGULAR 3.0s ease-in-out forwards;
 }
